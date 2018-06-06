@@ -1,0 +1,17 @@
+计划：header、XMLHttpRequest、HTML5的download属性、跨域、FileReader、类型化数组
+
+header
+
+HTML5的download属性：
+
+何为跨域：不同域之间的请求称之为跨域；
+
+何为不同的域：协议、域名、端口有任何一个不同，都被当作是不同的域；
+
+何为同源策略：同源策略是一种有效的安全策略，又分为DOM同源策略和XMLHttpRequest同源策略；
+
+DOM同源策略：禁止对不同源页面DOM进行操作，这里主要场景是iframe跨域的场景，不同域名的iframe是限制互相访问的；
+
+XMLHttpRequest同源策略：禁止使用XHR对象向不同源的服务器地址发起http请求；
+
+解决跨域的方式：CORS、nginx反向代理、JSONP

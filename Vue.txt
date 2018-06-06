@@ -1,0 +1,21 @@
+安装vue脚手架vue-cli：npm install vue-cli -g
+
+初始化vue + webpack项目：vue init webpack [program-name]
+
+进入项目根目录下载相关依赖：npm install
+
+启动项目：npm run dev
+
+使用keep-alive时切换组建并不执行created。
+
+如果数据初始值是个对象，在查询到数据前模板里绑定的值都是undefined或是undefined的属性，这时会报错。
+
+js/md5.js
+
+VUE学习笔记
+1、如果修改界面没有用到的数据界面不会重新绚烂。
+2、set函数中多次赋值通常只会渲染一次，因为函数执行完全(不包括异步)才渲染。如果包含异步操作则异步操作中的赋值会造成多次渲染。
+3、data对象里面定义的函数里的this指向windows，methods和computed对象里定义的函数里的this指向模块的数据域。
+4、组件的data方法不是每次props更新都会执行，因为它是存组件自己的状态，不会根据父状态的改变而改变。
+5、使用和不使用v-bind的属性区别在于，v-bind的等号后面的值会被视为变量，直接设置属性等号后面的值会被看作字面量。
+6、PascalCase（首字母大写）是最通用的声明约定而kebab-case（横线分割）是最通用的使用约定，所有组建声明用PascalCase，组建调用使用kebab-case。

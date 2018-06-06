@@ -1,0 +1,24 @@
+componentDidCatch函数只有在render函数渲染组件时捕获到异常时才会执行，在render函数处理逻辑时抛出异常不会执行该函数。
+
+异步路由怎么回事？
+
+<App title={"&lt;!"}/>传递的是"&lt;!"
+
+<App title="&lt;!"/>传递的是"<!"
+
+App.propTypes = {
+  isShow:PropTypes.string
+}
+
+<App isShow={null}/>或<App isShow={undefined}/>不会报错null和undefined不会进行类型的检验
+
+安装flow：npm install flow-bin --save
+
+生成flow配置文件： npm run flow init //需要在package.json的scripts部分添加"flow":"flow"
+
+运行flow：npm run flow
+
+安装babel-preset-flow剥离flow语法：npm install babel-preset-flow --save
+
+安装typescript后执行tsc --init命令报错,可以将"tsc":"tsc --init"添加在package.json的scripts部分，然后执行npm run tsc
+

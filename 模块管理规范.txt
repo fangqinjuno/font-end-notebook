@@ -1,0 +1,6 @@
+commonJS:
+
+AMD:
+
+CMD:
+

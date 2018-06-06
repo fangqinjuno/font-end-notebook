@@ -1,0 +1,68 @@
+console.log(typeof null);//object
+console.log(typeof undefined);//undefined
+console.log(typeof NaN);//number
+console.log(NaN == null);//false
+console.log(NaN == undefined);false
+console.log(NaN == NaN);false
+
+let str = "sss";
+console.log(str++);//NaN
+console.log(str+1);//sss1
+
+原生AJAX的具体实现步骤
+
+AJAX的局限性：跨域请求限制
+
+new操作符实际的操作步骤：
+1、生成一个新对象
+2、把函数上下文指向这个新对象
+3、执行函数
+4、返回该新对象
+function point(p){
+  this.a = p;
+}
+console.log(point(10000));//undefined
+console.log(new point(10000));//{a:10000}
+
+箭头函数与普通函数有什么区别？
+
+实现深度克隆函数clone
+function clone(obj){
+  if(typeof obj === "object" && obj !== null){
+    var _obj = Object.prototype.toString.call(obj) === "[object Object]" ? {} : [];
+    for(var key in obj){
+      _obj[key] = clone(obj[key]);
+    }
+    return _obj;
+  }else{
+    return obj;
+  }
+}
+
+数组与对象的toString方法的返回值不一样
+console.log(["aaaa"].toString());//aaaa
+console.log({a:"aaaa"}.toString());//[object Object]
+想要区分变量的类型是数组还是对象可以通过Object.prototype.toString.call(obj);
+
+javascript原型链详解
+
+取原始值（ToPrimitive）操作:
+1、先调用valueOf()方法,如果有该方法且返回值是原始类型的数据则返回该值，否则进行第二步。
+2、调用toString()方法，如果有该方法且返回值是原始类型的数据则返回该值，否则报错。
+
+类型转换详解
+1、如果"+"操作符的操作数中有一个不为数字，则两个操作数都要先进行取原始值操作后再相加。
+
+将变量强制转换成字符串的方法
+1、String(a);//实际是调用a的toString()方法。
+2、a.toString();
+3、a+"";利用字符串拼接，这个方法实际上是先将a取原始值，再加上"";
+4、JSON.stringify("123");//这个方法的缺点是如果a原本就是string类型的则会返回""123"",字符串长度为5，
+且如果JSON.stringify()的参数是有递归引用的对象则会报错，例如：
+var a={},b={};
+a.param = b;
+b.param = a;
+JSON.stringify(a);
+报错：TypeError
+
+事件捕获

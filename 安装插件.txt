@@ -1,0 +1,1 @@
+安装atom -> setting -> install -> 安装react、emmet、file-icons、minimap、hyperclick
