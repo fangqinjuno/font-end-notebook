@@ -1,0 +1,46 @@
+CSS3属性：
+
+边框：
+border-radius:
+box-shadow:
+border-image:
+
+背景：
+background-size（规定背景图片的大小）:100% 100%;
+background-origin（规定背景图片的绘制区域）:border-box | padding-box | content-box;
+background-clip（规定背景的绘制区域）:border-box、padding-box、content-box;
+
+文本效果：
+text-shadow:5px(水平位移) 5px(垂直位移) 5px(模糊距离) #FFF(阴影颜色)
+word-wrap:normal、break-word;
+
+2D旋转：
+transform:translate(50px,50%)(位移)、rotate(30deg)(旋转)、scale(2,4)(放大)、skew(20deg,30deg)(变形拉扯)、matrix()(综合)
+transform-origin(变化的起点):0% 0%;
+
+过渡：
+transition:width 2s linear 1s,height 2s linear 1s,transform 2s linear 1s;
+transition-property(属性名称):none | all | property;
+transition-duration(过渡时间):5s;
+transition-timing-function(过渡时间曲线):linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n)
+transition-delay(过渡延迟):5s;
+
+动画：
+@keyframes name{
+    from{}
+    to{}
+}
+@keyframes name{
+    0%{}
+    50%{}
+    100%{}
+}
+animation：name 5s;
+animation-name：name;
+animation-duration：time;
+animation-timing-function：linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n)
+animation-delay：time;
+animation-iteration-count：n | infinite
+animation-direction：normal | alternate(正反轮流播放)
+animation-play-state(规定动画是播放还是暂停)：paused | running
+animation-fill-mode：
