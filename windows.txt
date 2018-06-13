@@ -1,0 +1,7 @@
+windows.history.go();
+windows.history.back();
+windows.history.forword();
+windows.history.pushState();//给history对象多添加一项，改变url,但是并不会查找页面是否存在，也不会刷新页面。
+windows.history.replaceState();//改变history对象的当前项，改变url,但是并不会查找页面是否存在，也不会刷新页面。
+windows.history.state;
+windows.onpopstate = ()=>{};//在go()、back()、forword()和浏览器操作时触发，pushState()和replaceState()并不会触发。
